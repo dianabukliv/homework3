@@ -1,19 +1,18 @@
 //1
-function getMaxDigit(number) {
-    number = number.toString()
-    
-    let cur = number[0]
-    for (let i = 1; i < number.lenght; i++){
-        if (cur < number[i] ) {
-           
+const getMaxDigit = function (number) {
+    number=number.toString()
+
+    let current = number[0]
+    for (let i = 0; i < number.length; i++) {
+        if ( current > number[i]) {
             continue
         } else {
-            cur = number[i]
+            current = number[i]
         }
-    }
-    return cur
-} 
-console.log(`Найбільша цифра ${getMaxDigit(543)}`);
+    } 
+    return current 
+}
+console.log(`Найбільше число : ${getMaxDigit(4567)}`) ;
 
 //2
 
@@ -51,7 +50,7 @@ function getRandomNumber(n,m) {
 }
 console.log (`Рандомна цифра ${getRandomNumber(2,6)}`);
 
-//8
+//6
 
 function getRandomPassword(n=6) {
     let randomNumber = Math.floor(Math.random(10000) * Math.pow(10,n) )
